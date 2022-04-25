@@ -40,7 +40,7 @@ O     L
    >>> motor.frear()
    >>> motor.velocidade
    0
-   >>># Testando Direcao
+   >>> #Testando Direcao
    >>> direcao = Direcao()
    >>> direcao.valor
    'Norte'
@@ -99,3 +99,26 @@ O     L
 
 
 """
+
+class Motor:
+    def __init__(self):
+        self.velocidade = 0
+    def acelerar(self):
+        self.velocidade += 1
+
+    def frear(self):
+        if self.velocidade == 1:
+            self.velocidade -= 1
+        else:
+            self.velocidade -= 2
+
+
+class Direcao:
+    def __init__(self):
+        self.valor = str
+
+    def girar_a_direita(self):
+        pass
+
+    def girar_a_esquerda(self):
+        pass
